@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Poppins:wght@700&display=swap');
+
+:root {
+    --bg-color-start: #f0f3f8;
+    --bg-color-end: #e5e9f1;
+    --text-color: #2c2c2c;
+    --purple: #8146e2;
+    --blue: #407bff;
+    --light-purple: #9b72ff;
+    --light-blue: #72b2ff;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-color);
+    background-color: #f0f0f0; /* Cor de fundo suave */
+    height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Base para botões e cards */
+.cta-button, .cta-primary {
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+/* Cabeçalho */
+.header {
+    display: flex;
+    justify-content: space-between; /* Alinha o logo e o contêiner do menu nas extremidades */
+    align-items: center; /* Centraliza verticalmente todos os itens */
+    padding: 5px 50px;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+    margin: 20px 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #333333;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: bold;
+}
+
+/* Botão "Adquirir" */
+.cta-button {
+    background-image: linear-gradient(to right, var(--purple) 0%, var(--blue) 50%, var(--purple) 100%);
+    background-size: 200% auto;
+    color: #fff;
+    /* Certifique-se de que a transição está aqui */
+    transition: background-position 0.5s ease-in-out, transform 0.3s ease;
+    transform: scale(1);
+    border: none;
+    border-radius: 50px;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 10px 25px;
+}
+
+.cta-button:hover {
+    background-position: right center; /* Move o background para a direita no hover */
+    transform: scale(1.05); /* Aumenta o tamanho */
+}
+
+/* Seção Principal (Hero) */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    /* gap: 50px; */
+    height: calc(100vh - 100px); /* Ajusta a altura para caber na tela */
+}
+
+.hero-content {
+    max-width: 500px;
+} 
+
+.hero-content h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 4em;
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 20px 0 50px;
+    color: #fff;
+}
+
+.hero-content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 50%;
+    align-items: center;
+    padding-left: 10px;
+    color: #e5e9f1;
+}
+
+.error-message {
+    font-family: 'Poppins', sans-serif;
+    color: #2c2c2c;
+    max-width: 600px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+.error-message h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+.error-message p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
